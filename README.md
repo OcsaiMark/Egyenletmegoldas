@@ -1,0 +1,2 @@
+# Egyenletmegoldas
+grg.nkvgdbkhb
