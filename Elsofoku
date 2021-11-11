@@ -1,0 +1,35 @@
+import math, cmath
+def f1(label):
+    print(label)
+    a= input("\tKérem a másodfokú egyenlet főegyütthatóját: ")
+    a= float(a)
+    while a==0:
+        print("\tEz nem lesz másodfokú egyenlet; nem oldom meg.")
+        a= input("\tKérem a másodfokú egyenlet főegyütthatóját: ")
+        a= float(a)
+ 
+    b= input("\tKérem az elsőfokú tag együtthatóját: ")
+    c= input("\tKérem a konstans tagot: ")
+    b= float(b)
+    c= float(c)
+ 
+    d= b*b-4*a*c
+    print("\tA diszkrimináns értéke", d)
+ 
+    if d>=0:
+        print("\tVan valós megoldás.")
+        x1= (-b-math.sqrt(d))/(2*a)
+        x2= (-b+math.sqrt(d))/(2*a)
+        print("\tAz egyik megoldás", x1)
+        print("\tA másik megoldás", x2)
+    else:
+        print("\tNincs valós megoldás.")
+        x1= (-b-cmath.sqrt(d))/(2*a)
+        x2= (-b+cmath.sqrt(d))/(2*a)
+        print("\tAz egyik megoldás", x1)
+        print("\tA másik megoldás", x2)
+
+
+f1("Elsőfokú")
+
+
